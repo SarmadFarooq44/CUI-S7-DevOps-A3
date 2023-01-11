@@ -16,7 +16,7 @@ pipeline{
             steps{
                 sh "pwd"
                 sh "cd test"
-                sh "node all.js"
+                sh "pwd"
             }
         }
     }
