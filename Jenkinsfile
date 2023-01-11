@@ -12,5 +12,10 @@ pipeline{
                 sh "docker run -p 3150:3150 --name as3container -d as3image"
             }
         }
+        stage("Testing Node Js App"){
+            steps{
+                sh "pwd"
+            }
+        }
     }
 }
