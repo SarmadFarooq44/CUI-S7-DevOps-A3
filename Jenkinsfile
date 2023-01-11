@@ -15,6 +15,8 @@ pipeline{
         stage("Testing Node Js App"){
             steps{
                 sh "pwd"
+                sh "cd test"
+                sh "node all.js"
             }
         }
     }
