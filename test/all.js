@@ -2,6 +2,13 @@ const { Builder, By, Key, until } = require("selenium-webdriver");
 const webdriver = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const chromedriver = require("chromedriver");
+ChromeOptions options = new ChromeOptions();
+options.setExperimentalOption("prefs", chromePrefs);
+options.addArguments("--no-sandbox");
+options.addArguments("--headless"); //!!!should be enabled for Jenkins
+options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
+options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
+driver = new ChromeDriver(options);
 
 async function testcase1() {
   let driver = await new Builder().forBrowser("chrome").build();
