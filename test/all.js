@@ -1,17 +1,26 @@
+// from selenium.webdriver.chrome.options import Options
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const webdriver = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const chromedriver = require("chromedriver");
-ChromeOptions options = new ChromeOptions();
-options.setExperimentalOption("prefs", chromePrefs);
-options.addArguments("--no-sandbox");
-options.addArguments("--headless"); //!!!should be enabled for Jenkins
-options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
-options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
-driver = new ChromeDriver(options);
+// ChromeOptions options = new ChromeOptions();
+// options.setExperimentalOption("prefs", chromePrefs);
+// options.addArguments("--no-sandbox");
+// options.addArguments("--headless"); //!!!should be enabled for Jenkins
+// options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
+// options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
+// driver = new ChromeDriver(options);
+
+
+
+// chrome_options = Options()
+// chrome_options.add_argument('--headless')
+// chrome_options.add_argument('--no-sandbox')
+// chrome_options.add_argument('--disable-dev-shm-usage')
+// d = webdriver.Chrome('/home/<user>/chromedriver',chrome_options=chrome_options)
 
 async function testcase1() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(new chrome.Options().headless()).build();
 
   // .setChromeOptions(new chrome.Options().headless())
   try {
@@ -43,7 +52,7 @@ async function testcase1() {
 }
 
 async function testcase2() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(new chrome.Options().headless()).build();
 
   // .setChromeOptions(new chrome.Options().headless())
   try {
@@ -71,7 +80,7 @@ async function testcase2() {
 }
 
 async function testcase3() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(new chrome.Options().headless()).build();
 
   // .setChromeOptions(new chrome.Options().headless())
   try {
@@ -109,7 +118,7 @@ async function testcase3() {
 }
 
 async function testcase4() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(new chrome.Options().headless()).build();
 
   // .setChromeOptions(new chrome.Options().headless())
   try {
@@ -147,7 +156,7 @@ async function testcase4() {
 }
 
 async function testcase5() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  let driver = await new Builder().forBrowser("chrome").setChromeOptions(new chrome.Options().headless()).build();
 
   // .setChromeOptions(new chrome.Options().headless())
   try {
