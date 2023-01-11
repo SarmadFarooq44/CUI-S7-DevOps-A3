@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage("Build Docker Image"){
             steps{
-                sh "docker build -t as3image ."
+                sh "docker build -t as31image ."
             }
         }
         stage("Deploy Node JS App"){
             steps{
-                sh "docker run -p 3150:3150 --name as3container -d as3image"
+                sh "docker run -p 3150:3150 --name as31container -d as31image"
             }
         }
         stage("Testing Node Js App"){
