@@ -17,6 +17,7 @@ pipeline{
                 sh "pwd"
                 sh "cd test"
                 sh "pwd"
+                sh "ls"
             }
         }
     }
