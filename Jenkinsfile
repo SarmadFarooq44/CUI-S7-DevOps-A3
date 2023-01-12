@@ -18,7 +18,7 @@ pipeline{
                 sh "cd test"
                 sh "pwd"
                 sh "ls"
-                sh "node all.js"
+                
                 
             }
         }
